@@ -8,7 +8,8 @@ realizada.
 
 ## Instalación
 ```bash
-git clone https://github.com/alejoespin/codeact-project
+          
+git clone https://github.com/alejoespin/codeact-project.git
 cd codeact-project
 go mod tidy
 ```
@@ -71,6 +72,9 @@ AUDIT-RESPONSE=true
 Inicialmente se deben realizar la configuraciones correspondientes (**agent/context.md , agent/configs.env**) una vez 
 configurados se debe generar el ejecutable con el siguiente comando.
 
+Para el proceso se genera un archivo ***tmp.go*** con el código a ejecutar el cual es eliminado una vez se realiza la
+ejecución del mismo.
+
 ```
 cd codeact-project
 go mod tidy
@@ -87,10 +91,8 @@ una vez ingresada se generará un mensaje con el texto y la respuesta del proces
 -> Response:
 ```
 
-Para el proceso se genera un archivo ***tmp.go*** con el código a ejecutar el cual es eliminado una vez se realiza la
-ejecución del mismo.
-
-Ej:
+```
+Ejemplo:
 -> Request
 ¿Cuántos pesos colombianos son 150 dólares hoy?
 Response >  549514.42 pesos colombianos son 150 dólares hoy.
